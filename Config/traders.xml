@@ -1,0 +1,40 @@
+<LaurasMod name="traders.xml">
+
+<!--	Testing adjusting the item count when a group appears  -->
+	<!-- Adding more skill magazines -->
+		<set xpath="/traders/trader_item_groups/trader_item_group[contains(@name,'skillMagazines')]/item/@count">3,10</set>
+		
+	<!-- Expanding the amount of basic resources that can be found at the trader -->	
+		<set xpath="/traders/trader_item_groups/trader_item_group[@name='generalResources']/item[@name='resourceGunPowder']/@count">50,500</set>
+		
+		<set xpath="/traders/trader_item_groups/trader_item_group[@name='generalResources']/item[@name='resourceScrapBrass']/@count">50,500</set>
+		
+		<set xpath="/traders/trader_item_groups/trader_item_group[@name='generalResources']/item[@name='resourceOilShale']/@count">50,500</set>
+	
+
+	<!-- Adjusting the closest trader rekt to have more skill books ;-p -->
+		<append xpath="/traders/trader_item_groups/trader_item_group[@name='skillMagazinesTraderRekt']">
+			<item name="riflesSkillMagazine" count="3,7"/>
+			<item name="harvestingToolsSkillMagazine" count="3,7"/>
+			<item name="repairToolsSkillMagazine" count="3,7"/>
+			<item name="salvageToolsSkillMagazine" count="3,7"/>
+			<item name="workstationSkillMagazine" count="3,7"/>
+			
+			<item name="machineGunsSkillMagazine" count="3,7"/>
+			<item name="armorSkillMagazine" count="3,7"/>
+			<item name="medicalSkillMagazine" count="3,7"/>
+			<item name="vehiclesSkillMagazine" count="3,7"/>
+			
+			<item name="electricianSkillMagazine" count="3,7"/>
+			<item name="trapsSkillMagazine" count="3,7"/>
+		</append>
+	
+	<!-- Late hours -->
+
+		<set xpath="/traders/trader_info/@open_time">4:05</set>
+		<set xpath="/traders/trader_info/@close_time">22:50</set>
+		<set xpath="/traders/trader_info/@reset_interval">2</set>
+	<!-- Adjusting Rekt Skill magazines -->
+		<set xpath="/traders/trader_info[@id='8']/trader_items/item[@group='skillMagazinesTraderRekt']/@count">3,6</set>
+		
+</LaurasMod>

@@ -1,0 +1,17 @@
+<LaurasMod name="recipes.xml">
+
+<!--	// SMX // God Mode Buff Conversion -->
+	<!-- MORE CEMENT!!!!!! castles require just a wee bit... -->
+		<set xpath="/recipes/recipe[@name='resourceConcreteMix']/@count">10</set>
+		
+		<append xpath="/recipes">
+			<recipe name="solarCell" count = "1" craft_area="workbench" tags="perkAdvancedEngineering,learnable"> 
+				<ingredient name="resourceForgedSteel" count="40"/>
+				<ingredient name="resourceAcid" count="4"/>
+				<ingredient name="resourceScrapPolymers" count="40"/>
+				<effect_group>
+					<passive_effect name="CraftingIngredientCount" level="0,1,2,3,4,5" operation="perc_add" value=".25,.25,.25,.25,.15,.10" tags="resourceForgedSteel,resourceAcid,resourceScrapPolymers"/>
+				</effect_group>
+			</recipe>
+		</append>
+</LaurasMod>

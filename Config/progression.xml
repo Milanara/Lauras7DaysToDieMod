@@ -1,0 +1,24 @@
+<LaurasMod name="progression.xml">
+
+<!--	// SMX // God Mode Buff Conversion -->
+<!-- Warning, there are some other items that indicate a level mas of 100 which might cause problems after raising the level cap to 125  Re: effect_group 
+   Laura days later:  Oh look it IS an issue and once I got over the level max the recipes failed. Need to go in and update all of the tiers to list the new 
+                      level max of 125-->
+	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingElectrician']/@max_level">125</set>
+	<append xpath="/progression/crafting_skills/crafting_skill[@name='craftingElectrician']">
+		<display_entry icon="solarCell" name_key="electricianT5" has_quality="true" unlock_level="100,105,110,115,120,125">
+			<unlock_entry item="solarCell" unlock_tier="1" />
+		</display_entry>		
+	</append>
+	
+	<append xpath="/progression/crafting_skills/crafting_skill[@name='craftingElectrician']/effect_group">
+		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="100,125" value="1" tags="solarCell"/>
+		<passive_effect name="CraftingTier" operation="base_add" level="100,105,110,115,120,125" value="1,2,3,4,5" tags="solarCell"/>
+	</append>
+	<!-- Fix the level max for the electrician passive effects -->
+	
+	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingElectrician']/effect_group/passive_effect[@tags='generatorbank,electricwirerelay,switch,tripwirepost,ceilingLight01_player,industrialLight01_player,industrialLight02_player,ceilingLight07_player']/@level">25,125</set>
+	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingElectrician']/effect_group/passive_effect[@tags='motionsensor,electrictimerrelay,pressureplate,pressureplateLong,spotlightPlayer,speaker']/@level">50,125</set>
+	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingElectrician']/effect_group/passive_effect[@tags='batterybank,vaultDoor01_Powered,vaultDoor01Double_Powered,vaultHatch01_Powered,ironGarageDoor_PoweredBlockVariantHelper,woodenGarageDoor3x3_PoweredBlockVariantHelper,woodenGarageDoor4x3_PoweredBlockVariantHelper,woodenGarageDoor5x3_PoweredBlockVariantHelper,steelGarageDoor3x3_PoweredBlockVariantHelper,steelGarageDoor4x3_PoweredBlockVariantHelper,steelGarageDoor5x3_PoweredBlockVariantHelper,metalReinforcedWoodDrawBridgePowered']/@level">75,125</set>
+	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingElectrician']/effect_group/passive_effect[@tags='carBattery' and @name='RecipeTagUnlocked']/@level">65,125</set>
+</LaurasMod>

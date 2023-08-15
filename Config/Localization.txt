@@ -1,0 +1,2 @@
+Key,File,Type,UsedInMainMenu,NoTranslate,english,Context / Alternate Text,german,latam,french,italian,japanese,koreana,polish,brazilian,russian,turkish,schinese,tchinese,spanish
+electricianT5,progression,Attribute,,,Tier 5: SolarCells,,Stufe 3: Batterien,Nivel 3: Baterías,Échelon 3 : batteries,Grado 3: Batterie,ティア3：バッテリー,티어 3: 배터리,Poziom 3: baterie,Categoria 3: Baterias,Уровень 3: аккумуляторы,3. Kademe: Aküler,第3级：电池,第 3 層：電池

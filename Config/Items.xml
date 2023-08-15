@@ -1,0 +1,16 @@
+<LaurasMod name="Items.xml">
+
+<!--	// SMX // God Mode Buff Conversion -->
+	<!-- stack sizes -->
+		<set xpath="/items/item[@name='ammo762mmBulletBall']/property[@name='Stacknumber']/@value">500</set>
+		<set xpath="/items/item[@name='ammo9mmBulletBall']/property[@name='Stacknumber']/@value">1200</set>
+		<set xpath="/items/item[@name='unit_iron']/property[@name='Stacknumber']/@value">90000</set>
+		
+		<set xpath="/items/item/property[@name='Stacknumber' and @value = '10']/@value">100</set>
+		
+		
+	<!-- Auger -->
+		<set xpath="/items/item[@name='meleeToolPickT3Auger']/effect_group/passive_effect[@name='BlockDamage' and @operation='base_set']/@value">100</set>
+		<set xpath="/items/item[@name='meleeToolPickT3Auger']/effect_group/passive_effect[@name='MaxRange']/@value">6</set>
+		
+</LaurasMod>
