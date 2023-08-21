@@ -8,12 +8,15 @@
 	<append xpath="/progression/crafting_skills/crafting_skill[@name='craftingElectrician']">
 		<display_entry icon="solarCell" name_key="electricianT5" has_quality="true" unlock_level="100,105,110,115,120,125">
 			<unlock_entry item="solarCell" unlock_tier="1" />
+		</display_entry>
+		<display_entry icon="solarbank" name_key="electricianT5" has_quality="false" unlock_level="100">
+			<unlock_entry item="solarbank" />
 		</display_entry>		
 	</append>
 	
 	<append xpath="/progression/crafting_skills/crafting_skill[@name='craftingElectrician']/effect_group">
-		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="100,125" value="1" tags="solarCell"/>
-		<passive_effect name="CraftingTier" operation="base_add" level="100,105,110,115,120,125" value="1,2,3,4,5" tags="solarCell"/>
+		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="100,125" value="1" tags="solarCell,solarbank"/>
+		<passive_effect name="CraftingTier" operation="base_add" level="105,110,115,120,125" value="1,2,3,4,5" tags="solarCell,solarbank"/>
 	</append>
 	<!-- Fix the level max for the electrician passive effects -->
 	
@@ -21,4 +24,6 @@
 	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingElectrician']/effect_group/passive_effect[@tags='motionsensor,electrictimerrelay,pressureplate,pressureplateLong,spotlightPlayer,speaker']/@level">50,125</set>
 	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingElectrician']/effect_group/passive_effect[@tags='batterybank,vaultDoor01_Powered,vaultDoor01Double_Powered,vaultHatch01_Powered,ironGarageDoor_PoweredBlockVariantHelper,woodenGarageDoor3x3_PoweredBlockVariantHelper,woodenGarageDoor4x3_PoweredBlockVariantHelper,woodenGarageDoor5x3_PoweredBlockVariantHelper,steelGarageDoor3x3_PoweredBlockVariantHelper,steelGarageDoor4x3_PoweredBlockVariantHelper,steelGarageDoor5x3_PoweredBlockVariantHelper,metalReinforcedWoodDrawBridgePowered']/@level">75,125</set>
 	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingElectrician']/effect_group/passive_effect[@tags='carBattery' and @name='RecipeTagUnlocked']/@level">65,125</set>
+	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingElectrician']/effect_group/passive_effect[@tags='carBattery' and @name='CraftingTier']/@level">75,85,95,100,125</set>
+	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingElectrician']/effect_group/passive_effect[@tags='carBattery' and @name='CraftingTier']/@value">1,2,3,4,4</set>
 </LaurasMod>

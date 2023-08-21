@@ -13,5 +13,21 @@
 					<passive_effect name="CraftingIngredientCount" level="0,1,2,3,4,5" operation="perc_add" value=".25,.25,.25,.25,.15,.10" tags="resourceForgedSteel,resourceAcid,resourceScrapPolymers"/>
 				</effect_group>
 			</recipe>
+			<recipe name="solarbank" count="1" craft_area="workbench" tags="perkAdvancedEngineering,learnable">
+				<ingredient name="resourceElectricParts" count="10"/>
+				<ingredient name="resourceForgedSteel" count="20"/>
+		</recipe>
+		<recipe name="resourceAcid" count="1" craft_area="chemistryStation" >
+			<ingredient name="foodCropYuccaFruit" count="2"/>
+			<ingredient name="resourceCropChrysanthemumPlant" count="1"/>
+			<ingredient name="resourceYuccaFibers" count="10"/>
+			<ingredient name="drinkJarBoiledWater" count="1"/>
+		</recipe>
+		<recipe name="resourceMechanicalParts" count="1" craft_area="workbench" >
+			<ingredient name="resourceForgedSteel" count="4"/>
+		</recipe>
 		</append>
+		
+		<!-- Fix the broken net-loss for farming -->
+		<set xpath="/recipes/recipe[starts-with(@name,'planted')]/ingredient/@count">2</set>
 </LaurasMod>
